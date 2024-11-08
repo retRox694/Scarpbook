@@ -1,0 +1,76 @@
+.paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+}
+
+.front,
+.back {
+  /* background-color: rgb(223, 71, 71); */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.front {
+  z-index: 2;
+  backface-visibility: hidden;
+  /* border-left: 3px solid powderblue; */
+}
+
+.back {
+  z-index: 1;
+}
+
+.front-content,
+.back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+
+.back-content {
+  transform: rotateY(180deg);
+}
+
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg);
+}
+
+.current {
+  z-index: 1;
+}
+
+#imgFront
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px ;
+}
+
+#imgBack
+{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  padding-right: 0.1em;
+}
+
+#f1 img
+{
+  height: 101% !important;
+}
+
